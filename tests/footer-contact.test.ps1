@@ -1,5 +1,5 @@
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$pages = @('index.html', 'current-issue.html', 'archive.html', 'about.html', 'authors.html')
+$pages = @('index.html', 'current-issue.html', 'archive.html', 'about.html', 'authors.html', 'more-info.html')
 $contactLink = '<a href="mailto:Notrue_@outlook.com">Notrue_@outlook.com</a>'
 
 foreach ($page in $pages) {
