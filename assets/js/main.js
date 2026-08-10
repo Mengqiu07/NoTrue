@@ -51,13 +51,6 @@
       });
     });
 
-    document.querySelectorAll('[data-author-form], [data-author-guide-form], .author-guide form').forEach((form) => {
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        announce('投稿指引已在本页保存；提交服务尚未开放。');
-      });
-    });
-
     const backToTop = document.querySelector('[data-back-to-top]');
     if (backToTop) {
       const updateVisibility = () => backToTop.classList.toggle('is-visible', window.scrollY > 360);
