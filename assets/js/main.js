@@ -26,8 +26,8 @@
         {
           type: 'notice',
           label: '公告',
-          title: 'Notrue正式建立，并接受文章投稿',
-          summary: 'Notrue原创作品展示计划正式建立，并面向公众接受符合规范的原创投稿。',
+          title: 'Notrue正式建立，并接受作品提交',
+          summary: 'Notrue原创作品展示计划正式建立，并面向公众接受符合规范的原创提交作品。',
           href: 'news-notrue-launch.html'
         }
       ];
