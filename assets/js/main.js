@@ -24,11 +24,48 @@
     if (searchToggle && searchPanel) {
       const searchIndex = [
         {
+          type: 'author',
+          label: '作者',
+          title: 'No True 项目组',
+          summary: '本站发起与维护团队，负责作品征集、规范维护、审核协调与展示页面维护。',
+          keywords: 'No True 项目组 作者介绍 项目规范 本站作品',
+          href: 'notrueprojectteam.html'
+        },
+        {
+          type: 'notice',
+          label: '公告',
+          title: '《No true项目规范》已上架',
+          summary: '2026年8月14日发布，可在最新作品、作品归档或此公告中打开。',
+          href: '2026-08-14.html'
+        },
+        {
+          type: 'author',
+          label: '作者',
+          title: '作者介绍',
+          summary: 'No True 项目组的作者资料与本站作品介绍。',
+          keywords: '作者介绍 作者 项目组 本站作品 公开资料',
+          href: 'author-introductions.html'
+        },
+        {
+          type: 'article',
+          label: '文章',
+          title: '《No true项目规范》',
+          summary: 'No true No.0：项目说明、提交方式、观看方式与内容规范。',
+          href: 'work-notrue-project-spec.html'
+        },
+        {
+          type: 'notice',
+          label: '公告',
+          title: '即将发布《No true No.0》（《No True项目规范》）',
+          summary: '2026年8月14日，《No True项目规范》将在本站发布。',
+          href: '2026-08-13.html'
+        },
+        {
           type: 'notice',
           label: '公告',
           title: 'Notrue正式建立，并接受作品提交',
           summary: 'Notrue原创作品展示计划正式建立，并面向公众接受符合规范的原创提交作品。',
-          href: 'news-notrue-launch.html'
+          href: '2026-08-12.html'
         }
       ];
       const form = searchPanel.querySelector('form');
@@ -38,7 +75,7 @@
         const category = document.createElement('select');
         category.className = 'search-category';
         category.setAttribute('aria-label', '选择搜索分类');
-        category.innerHTML = '<option value="all">不限分类</option><option value="notice">公告</option><option value="article">文章</option>';
+        category.innerHTML = '<option value="all">不限分类</option><option value="notice">公告</option><option value="article">文章</option><option value="author">作者</option>';
         searchInput.insertAdjacentElement('beforebegin', category);
         const results = document.createElement('div');
         results.className = 'search-results';
@@ -51,7 +88,7 @@
           const selectedType = category.value;
           const matched = searchIndex.filter((item) => {
             const categoryMatches = selectedType === 'all' || item.type === selectedType;
-            const text = `${item.title} ${item.summary}`.toLowerCase();
+            const text = `${item.title} ${item.summary} ${item.keywords || ''}`.toLowerCase();
             return categoryMatches && (!keyword || text.includes(keyword));
           });
           results.hidden = false;

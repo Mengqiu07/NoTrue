@@ -171,6 +171,17 @@ h3 { font-size: 1.2rem; }
 .news-article h1 { max-width: 16ch; }
 .news-article__body { margin-top: 36px; padding-top: 24px; border-top: 3px solid var(--gold); font-size: 1.12rem; }
 
+.work-page { padding-block: 72px; }
+.work-document { max-width: 1040px; }
+.work-document h1 { max-width: 18ch; }
+.work-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 28px 0; }
+.work-actions .button { text-decoration: none; }
+.pdf-viewer { min-height: min(76vh, 940px); border: 1px solid var(--rule); background: #fff; }
+.pdf-viewer object { display: block; width: 100%; height: min(76vh, 940px); }
+.pdf-viewer p { padding: 28px; }
+.work-card { align-content: start; gap: 8px; }
+.work-card h2, .work-card p { margin: 0; }
+
 .content-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 28px; }
 .content-grid > * { min-width: 0; }
 .content-grid > .card { grid-column: span 3; }
@@ -234,6 +245,8 @@ h3 { font-size: 1.2rem; }
   .section-heading, .submission-call__inner { align-items: flex-start; flex-direction: column; }
   .issue-preview-grid, .field-list { grid-template-columns: 1fr; }
   .field-intro, .field-list, .release-note { grid-column: 1; }
+  .work-page { padding-block: 48px; }
+  .pdf-viewer, .pdf-viewer object { min-height: 70vh; height: 70vh; }
 }
 
 @media (min-width: 769px) and (max-width: 1080px) {
