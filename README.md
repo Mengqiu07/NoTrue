@@ -1,4 +1,4 @@
-# No True Journal
+# No True Works
 
 [中文](#中文) · [English](#english)
 
@@ -6,21 +6,23 @@
 
 ## 中文
 
-**No True Journal** 是一个面向学生的逻辑幽默期刊网站。它为荒诞、奇想、假设性论证与创意写作留出认真阅读和讨论的空间：题目可以离奇，表达仍应具有自己的规则、推理与尊重。
+**No True Works** 是一个面向学生的逻辑幽默原创作品展示网站。它为荒谬、奇想、假设性论证与创意写作留出认真阅读和讨论的空间：题目可以离奇，表达仍应具有自己的规则、推理与尊重。
 
 这是一个无需构建工具的静态网站，可直接部署到 GitHub Pages。
 
 ### 页面与功能
 
-- 首页：介绍期刊定位、研究领域、出版动态与投稿提示。
-- 当前期刊：展示首期的筹备状态与待刊载内容区域。
-- 期刊归档：提供卷期索引与发布状态入口。
-- 关于期刊：说明办刊定位、投稿范围、出版原则和编辑协作方式。
-- 作者指南：介绍稿件范围、写作要求与伦理规范。
+- 首页：展示项目入口、本次导览与作品预览入口。
+- 最新作品：按页面展示当前已发布作品与待展示位置。
+- 作品归档：按发布时间从早到晚收录已发布作品。
+- 新闻公告：按日期提供独立新闻页面；同日多篇新闻使用日期后加编号的文件名。
+- 创作指南：介绍作品提交方式、创作要求与伦理规范。
+- 作者介绍：展示公开作者资料、作者详情与本站作品链接。
+- 更多信息：提供项目相关补充信息。
 - 响应式界面：适配桌面端与移动端；移动端提供折叠导航。
-- 轻量交互：搜索面板、归档视图切换提示与返回顶部按钮。
+- 轻量交互：搜索面板、分类搜索与返回顶部按钮。
 
-> 当前搜索和归档筛选为前端交互占位，尚未连接真实内容检索或筛选数据。
+> 站内搜索为前端静态索引，收录当前已添加的作品、新闻和作者资料。
 
 ### 技术栈
 
@@ -64,21 +66,23 @@
 
 ## English
 
-**No True Journal** is a student-facing journal website for logical humor. It makes room for absurd ideas, thought experiments, hypothetical arguments, and creative writing to be read and discussed seriously: a premise may be strange, but it should still have its own rules, reasoning, and respect for others.
+**No True Works** is a student-facing site for original logical-humor works. It makes room for absurd ideas, thought experiments, hypothetical arguments, and creative writing to be read and discussed seriously: a premise may be strange, but it should still have its own rules, reasoning, and respect for others.
 
 The project is a build-free static website that can be deployed directly to GitHub Pages.
 
 ### Pages and features
 
-- **Home:** journal introduction, research areas, publishing notes, and a submission prompt.
-- **Current issue:** the preparation status of the first issue and placeholders for forthcoming work.
-- **Archive:** an entry point for volume indexes and publication status.
-- **About:** the journal's purpose, submission scope, publishing principles, and editorial approach.
-- **Author guide:** submission scope, manuscript expectations, and ethical guidelines.
+- **Home:** project entry points, featured works, and the current guide.
+- **Latest works:** the currently featured work and forthcoming-work placeholders.
+- **Archive:** published works arranged from earliest to latest release date.
+- **News:** date-based standalone news pages; multiple posts on the same day use a numbered date filename.
+- **Creation guide:** submission instructions, creation expectations, and ethical guidelines.
+- **Author introductions:** public author profiles, author details, and links to their works.
+- **More information:** supplementary project information.
 - **Responsive layout:** designed for desktop and mobile, including a collapsible mobile navigation menu.
-- **Lightweight interactions:** a search panel, archive-view feedback, and a back-to-top button.
+- **Lightweight interactions:** a search panel with category filtering and a back-to-top button.
 
-> Search and archive filtering are currently front-end placeholders only; they are not connected to a real search index or data source.
+> Search uses a front-end static index for the works, news, and author profiles currently on the site.
 
 ### Tech stack
 
@@ -91,10 +95,13 @@ The project is a build-free static website that can be deployed directly to GitH
 ```text
 .
 ├── index.html              # Home page
-├── current-issue.html      # Current issue
-├── archive.html            # Issue archive
-├── about.html              # About the journal
-├── authors.html            # Author guide
+├── current-issue.html      # Latest works
+├── archive.html            # Works archive
+├── news.html               # News list
+├── authors.html            # Creation guide
+├── author-introductions.html # Author introductions
+├── work-notrue-project-spec.html # Work page with PDF preview and download
+├── notrueprojectteam.html  # No True Project Team profile
 └── assets/
     ├── css/styles.css      # Site-wide styles and responsive layout
     └── js/main.js          # Navigation, search, archive, and back-to-top behavior
@@ -124,9 +131,11 @@ As a static site, GitHub Pages serves the root-level `index.html` as the entry p
 
 ### Maintaining content
 
-- Update home-page copy and issue highlights in `index.html`.
-- Publish an issue in `current-issue.html`, then update the volume record in `archive.html`.
-- Revise submission guidance in `authors.html`.
+- Update home-page copy and featured works in `index.html`.
+- Add a work to `current-issue.html`, then add it to `archive.html` in release-date order.
+- Add news using a date-based filename such as `2026-08-14.html`; use `YYYY-MM-DD-01.html` when more than one post shares a date.
+- Revise creation guidance in `authors.html`.
+- Add author details using a concatenated formal English name or pinyin filename, without spaces or hyphens.
 - Change the site-wide visual design in `assets/css/styles.css`.
 - Change interaction behavior in `assets/js/main.js`.
 
@@ -134,7 +143,7 @@ Each page currently contains its own header and footer. When changing shared cop
 
 ### Contributing
 
-Suggestions and improvements to content, copy, accessibility, and front-end experience are welcome through Issues or Pull Requests. Please preview changes on desktop and mobile, and do not describe placeholder functionality as if it were already live.
+Suggestions and improvements to content, copy, accessibility, and front-end experience are welcome through the project’s feedback channels. Please preview changes on desktop and mobile, and do not describe placeholder functionality as if it were already live.
 
 ### License
 
