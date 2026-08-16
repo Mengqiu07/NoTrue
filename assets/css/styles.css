@@ -141,6 +141,8 @@ main { padding-block: 56px 72px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
 .section-heading > :last-child { max-width: 36ch; margin: 0; color: var(--muted); }
 .issue-preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.work-list { grid-template-columns: 1fr; }
+.content-grid.author-list > .card { grid-column: 1 / -1; }
 .issue-preview-grid .article-placeholder { display: grid; place-items: end start; min-height: 320px; color: var(--muted); font-family: Arial, "Microsoft YaHei", sans-serif; font-size: 0.86rem; letter-spacing: 0.1em; }
 .field-intro { grid-column: span 5; }
 .field-list { grid-column: 7 / span 6; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--rule); }
